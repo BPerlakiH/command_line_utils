@@ -1,0 +1,32 @@
+#git shortcuts:
+ 
+#log
+alias gl="git log --pretty=oneline --abbrev-commit --decorate=no -n 10"
+ 
+#rebase
+alias gitre="git fetch && git rebase origin/master"
+ 
+#merge in master to current branch
+alias gitmerge="git fetch && git merge origin/master"
+ 
+#rebase & push
+alias gitreforce="gitre && git push --force"
+ 
+#status
+alias gs="git status"
+ 
+#checkout
+alias gc="git checkout"
+ 
+#branch
+alias gb="git branch"
+#alias gb="git for-each-ref refs/heads/ --format='%(if)%(HEAD)%(then)%(color:green)%(end)%(refname:short)'"
+ 
+#branches ordered by "time ago"
+alias gbtime="git for-each-ref --sort=-committerdate refs/heads/ --format='%(if)%(HEAD)%(then)%(color:green)%(end)%(refname:short)    %(committerdate:relative)'"
+ 
+#commit with ammend
+alias gitamend="git commit --amend --no-edit"
+ 
+#stats on branch diff to master
+alias gitstat="git diff origin/master --stat"
